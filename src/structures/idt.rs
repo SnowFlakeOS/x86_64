@@ -361,7 +361,7 @@ pub struct Idt {
     ///   external interrupt was recognized.
     /// - If the interrupt occurs as a result of executing the INTn instruction, the saved
     ///   instruction pointer points to the instruction after the INTn.
-    interrupts: [IdtEntry<HandlerFunc>; 256 - 32],
+    pub interrupts: [IdtEntry<HandlerFunc>; 256 - 32],
 }
 
 impl Idt {
